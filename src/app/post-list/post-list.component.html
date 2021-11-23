@@ -1,5 +1,14 @@
-<div class="col-xl-12">
-  <div class="card mt-3" *ngFor="let post of posts">
+<div class="col-xl-12 d-flex flex-column">
+  <div
+    class="card col-md-8 mt-3 border border-primary"
+    *ngFor="let post of posts; let idx = index"
+    [ngClass]="{
+      border: idx % 2,
+      'align-self-end': idx % 2,
+      'border-warning': idx % 2,
+      'border-success': idx % 3
+    }"
+  >
     <div class="card-body">
       <h5 class="card-title">
         {{ post.title }}
