@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "be833b62-3de5-4f3a-9283-e6f327a68835"
+    "analytics": "dfe01f43-4df7-4ac9-a99c-4373d8b0087f"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-basics": {
+    "angular-bootstrap-products-list": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-basics",
+            "outputPath": "dist/angular-bootstrap-products-list",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-basics:build:production"
+              "browserTarget": "angular-bootstrap-products-list:build:production"
             },
             "development": {
-              "browserTarget": "angular-basics:build:development"
+              "browserTarget": "angular-bootstrap-products-list:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-basics:build"
+            "browserTarget": "angular-bootstrap-products-list:build"
           }
         },
         "test": {
@@ -100,5 +100,5 @@
       }
     }
   },
-  "defaultProject": "angular-basics"
+  "defaultProject": "angular-bootstrap-products-list"
 }
