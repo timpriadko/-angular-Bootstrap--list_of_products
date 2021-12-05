@@ -27,4 +27,14 @@ export class PostListComponent implements OnInit {
       }
     );
   }
+
+  removePost(id: number) {
+    this.postService.removePost(id).subscribe(() => {
+      this.posts = this.posts.filter((post) => post.id !== id);
+    });
+  }
+
+  trackByFn(index, item) {
+    return item.id;
+  }
 }

@@ -36,4 +36,10 @@ export class PostService {
         })
       );
   }
+
+  removePost(id: number): Observable<any> {
+    return this.http.delete<void>(
+      `https://jsonplaceholder.typicode.com/posts/${id}`
+    );
+  }
 }

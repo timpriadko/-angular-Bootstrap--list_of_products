@@ -16,6 +16,11 @@
       <p class="card-text">
         {{ post.body }}
       </p>
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-danger" (click)="removePost(post.id)">
+          Delete
+        </button>
+      </div>
     </div>
   </div>
 </div>
