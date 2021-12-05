@@ -1,40 +1,46 @@
-import { Component, OnInit } from '@angular/core';
-import { Post, PostService } from '../services/post.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Post, PostService } from './post.service';
 
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.scss'],
 })
-export class PostListComponent implements OnInit {
+// implements OnInit
+export class PostListComponent {
+  @Input()
   posts: Post[] = [];
-  error = '';
+
+  @Input()
+  headline: string = '';
+
+  @Output()
+  newHeadlineEvent = new EventEmitter<string>();
+
+  @Output()
+  removePostEvent = new EventEmitter<number>();
 
   constructor(private postService: PostService) {}
 
-  ngOnInit(): void {
-    this.fetchPosts();
+  newHeadline(value: string): void {
+    this.newHeadlineEvent.emit(value);
+    this.clearInput('newHeadlineInput');
   }
 
-  fetchPosts() {
-    this.postService.fetchPosts().subscribe(
-      (posts) => {
-        console.log(posts);
-        this.posts = posts;
-      },
-      (error) => {
-        this.error = error.message;
-      }
-    );
+  clearInput(inputId): void {
+    let input = <HTMLInputElement>document.getElementById(inputId);
+    input.value = '';
   }
 
-  removePost(id: number) {
-    this.postService.removePost(id).subscribe(() => {
-      this.posts = this.posts.filter((post) => post.id !== id);
-    });
+  removePost(id: number): void {
+    // this.postService.removePost(id).subscribe(() => {
+    //   this.posts = this.posts.filter((post) => post.id !== id);
+    // });
+
+    this.removePostEvent.emit(id);
   }
 
-  trackByFn(index, item) {
+  trackByFn(item): number {
     return item.id;
   }
 }
