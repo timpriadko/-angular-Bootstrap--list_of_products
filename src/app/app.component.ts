@@ -20,14 +20,12 @@ export class AppComponent {
   }
 
   changeHeadline(newHeadline: string): void {
-    console.log(newHeadline);
     this.currentHeadline = newHeadline;
   }
 
   fetchPosts(): void {
     this.postService.fetchPosts().subscribe(
       (posts) => {
-        console.log(posts);
         this.fetchedPosts = posts;
       },
       (error) => {
@@ -40,7 +38,5 @@ export class AppComponent {
     this.postService.removePost(id).subscribe(() => {
       this.fetchedPosts = this.fetchedPosts.filter((post) => post.id !== id);
     });
-
-    console.log(id);
   }
 }
