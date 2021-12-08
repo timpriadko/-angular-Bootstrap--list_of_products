@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, PostListComponent],
-  imports: [BrowserModule, HttpClientModule, NgbModule],
+  imports: [BrowserModule, HttpClientModule, NgbModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

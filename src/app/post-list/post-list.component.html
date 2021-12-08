@@ -2,15 +2,9 @@
   <h1 class="text-center">{{ headline }}</h1>
 
   <div class="card">
-    <div class="form-control">
-      <input
-        type="text"
-        placeholder="Headline"
-        id="newHeadlineInput"
-        #newHeadlineInput
-        [(ngModel)]="headlineInput"
-      />
-      <button class="btn mt-2" (click)="newHeadline(newHeadlineInput.value)">
+    <div class="form-control h-auto">
+      <input type="text" placeholder="Headline" [(ngModel)]="headlineInput" />
+      <button class="btn mt-2" (click)="newHeadline(headlineInput)">
         Change
       </button>
     </div>
