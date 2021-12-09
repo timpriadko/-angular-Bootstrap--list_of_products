@@ -1,6 +1,10 @@
 // en.json
 {
   "Common": {
-    "Yes": "Yes"
-  }
+    "Yes": "Yes",
+    "delete": "Delete",
+    "change": "Change"
+  },
+  "delete": "Delete",
+  "change": "Change"
 }

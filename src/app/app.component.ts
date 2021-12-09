@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { environment } from '../environments/environment';
 import { Post, PostService } from './post-list/post.service';
 
 @Component({

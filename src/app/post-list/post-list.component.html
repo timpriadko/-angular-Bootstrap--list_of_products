@@ -9,7 +9,7 @@
       (keyup.enter)="newHeadline(headlineInput)"
     />
     <button class="btn mt-2 mr-0" (click)="newHeadline(headlineInput)">
-      Change
+      {{ 'change' | translate }}
     </button>
   </div>
 
@@ -32,7 +32,7 @@
       </p>
       <div class="d-flex justify-content-end">
         <button class="btn btn-danger" (click)="removePost(post.id)">
-          Delete
+          {{ 'delete' | translate }}
         </button>
       </div>
     </div>

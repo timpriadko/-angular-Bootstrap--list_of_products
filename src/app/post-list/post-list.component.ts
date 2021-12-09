@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core/lib/translate.service';
 import { Post } from './post.service';
 
 @Component({
@@ -21,7 +22,7 @@ export class PostListComponent {
   @Output()
   removePostEvent = new EventEmitter<number>();
 
-  constructor() {}
+  constructor(private translateService: TranslateService) {}
 
   newHeadline(value: string): void {
     this.newHeadlineEvent.emit(value);
