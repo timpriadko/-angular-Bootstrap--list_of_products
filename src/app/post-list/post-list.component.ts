@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core/lib/translate.service';
+import { environment } from '../../environments/environment';
 import { Post } from './post.service';
 
 @Component({
