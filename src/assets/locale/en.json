@@ -1,8 +1,7 @@
 {
-  "Common": {
-    "Yes": "Yes",
-    "delete": "Delete",
-    "change": "Change"
+  "COMMON": {
+    "DELETE": "Delete",
+    "CHANGE": "Change"
   },
   "delete": "Delete",
   "change": "Change"

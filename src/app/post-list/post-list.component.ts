@@ -23,7 +23,14 @@ export class PostListComponent implements OnInit {
   @Output()
   removePostEvent = new EventEmitter<number>();
 
-  constructor(private translateService: TranslateService) {}
+  constructor(public translateService: TranslateService) {
+    translateService.addLangs(['en', 'fr']);
+    translateService.setDefaultLang('en');
+
+    const browserLang = translateService.getBrowserLang();
+    translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+    console.log(browserLang);
+  }
 
   ngOnInit(): void {
     this.translateService.use(environment.defaultLocale);
