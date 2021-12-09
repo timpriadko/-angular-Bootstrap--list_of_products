@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core/lib/translate.service';
 import { Post } from './post.service';
 
@@ -7,7 +7,7 @@ import { Post } from './post.service';
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.scss'],
 })
-export class PostListComponent {
+export class PostListComponent implements OnInit {
   @Input()
   posts: Post[] = [];
 
@@ -23,6 +23,10 @@ export class PostListComponent {
   removePostEvent = new EventEmitter<number>();
 
   constructor(private translateService: TranslateService) {}
+
+  ngOnInit(): void {
+    this.translateService.use(environment.defaultLocale);
+  }
 
   newHeadline(value: string): void {
     this.newHeadlineEvent.emit(value);
