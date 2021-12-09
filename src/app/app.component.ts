@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Post, PostService } from './post-list/post.service';
 
 @Component({
@@ -7,16 +8,20 @@ import { Post, PostService } from './post-list/post.service';
   styleUrls: ['./app.component.scss'],
   providers: [PostService],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   currentHeadline = 'Headline';
   headline: string = '';
   fetchedPosts: Post[] = [];
   error = '';
 
-  constructor(private postService: PostService) {}
+  constructor(
+    private postService: PostService,
+    private translateService: TranslateService
+  ) {}
 
   ngOnInit(): void {
     this.fetchPosts();
+    this.translateService.use(environment.defaultLocale);
   }
 
   changeHeadline(newHeadline: string): void {
