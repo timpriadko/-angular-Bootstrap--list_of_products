@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./hhomepageome.component.scss'],
+  styleUrls: ['./homepage.component.scss'],
 })
 export class HomepageComponent {
   constructor(private router: Router) {}

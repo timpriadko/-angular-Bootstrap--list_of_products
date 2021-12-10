@@ -12,9 +12,21 @@ import {
 } from '@ngx-translate/core';
 import { MissingTranslationService } from './services/translate-service/MissingTranslationService';
 import { HttpLoaderFactory } from './libs/settings/HttpLoaderFactory';
+import { HeaderComponent } from './header/header.component';
+import { NavigationComponent } from './header/navigation/navigation.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomepageComponent } from './homepage/homepage.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
-  declarations: [AppComponent, PostListComponent],
+  declarations: [
+    AppComponent,
+    PostListComponent,
+    HeaderComponent,
+    NavigationComponent,
+    HomepageComponent,
+    ErrorPageComponent,
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -33,6 +45,7 @@ import { HttpLoaderFactory } from './libs/settings/HttpLoaderFactory';
       useDefaultLang: true,
       defaultLanguage: 'en',
     }),
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
