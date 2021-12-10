@@ -1,0 +1,11 @@
+<nav class="navbar">
+  <h1>
+    <a [routerLink]="['/']">Post App</a>
+  </h1>
+  <ul>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a [routerLink]="['/']">Home</a>
+    </li>
+    <li routerLinkActive="active"><a routerLink="/posts">Posts</a></li>
+  </ul>
+</nav>
