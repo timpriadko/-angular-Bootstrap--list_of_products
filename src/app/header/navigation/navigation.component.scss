@@ -3,8 +3,6 @@
   @media (max-width: 991.98px) {
     display: block;
     position: relative;
-    // top: 50px;
-    // left: 50px;
 
     z-index: 1;
 
@@ -80,7 +78,7 @@
     }
 
     /*
-      * But let's hide the middle one.
+      * hide the middle one.
       */
     input:checked ~ span:nth-last-child(3) {
       opacity: 0;
@@ -88,7 +86,7 @@
     }
 
     /*
-      * Ohyeah and the last one should go the other direction
+      * the last one should go the other direction
       */
     input:checked ~ span:nth-last-child(2) {
       transform: rotate(-45deg) translate(0, -1px);
@@ -114,7 +112,7 @@
   @media (max-width: 991.98px) {
     position: absolute;
     width: 300px;
-    height: 84vh;
+    height: 90vh;
     flex-direction: column;
     text-align: end;
     padding: 25px;
