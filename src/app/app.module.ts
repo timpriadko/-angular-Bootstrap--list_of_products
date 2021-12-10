@@ -17,6 +17,7 @@ import { NavigationComponent } from './header/navigation/navigation.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { PostPageComponent } from './modules/post/pages/post-page/post-page.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     NavigationComponent,
     HomepageComponent,
     ErrorPageComponent,
+    PostPageComponent,
   ],
   imports: [
     BrowserModule,
