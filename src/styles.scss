@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+// @import './variables.scss';
 
 $primaryColor: hotpink;
 $bordo: rgb(141, 1, 94);
@@ -7,6 +8,8 @@ $warning: $bordo !default;
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap/scss/bootstrap-grid.scss';
+@import 'bootstrap/dist/css/bootstrap-grid.min.css';
 
 * {
   box-sizing: border-box;
