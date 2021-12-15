@@ -10,14 +10,14 @@ import {
   TranslateModule,
 } from '@ngx-translate/core';
 import { HttpLoaderFactory } from './libs/settings/HttpLoaderFactory';
-import { HeaderComponent } from './header/header.component';
-import { NavigationComponent } from './header/navigation/navigation.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ErrorPageComponent } from './error-page/error-page.component';
 import { PostPageComponent } from './modules/post/pages/post-page/post-page.component';
 import { HomepageComponent } from './modules/home/pages/homepage/homepage.component';
 import { PostListComponent } from './modules/post/components/post-list/post-list.component';
 import { MissingTranslationService } from './core/services/translate-service/MissingTranslationService';
+import { HeaderComponent } from './core/header/header.component';
+import { NavigationComponent } from './core/header/navigation/navigation.component';
+import { ErrorPageComponent } from './core/error-page/error-page.component';
 
 @NgModule({
   declarations: [
