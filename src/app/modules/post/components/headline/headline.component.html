@@ -1,0 +1,13 @@
+<h1 class="text-center">{{ headline }}</h1>
+
+<div class="card d-none">
+  <input
+    type="text"
+    placeholder="{{ 'COMMON.HEADLINE' | translate }}"
+    [(ngModel)]="headlineInput"
+    (keyup.enter)="newHeadline(headlineInput)"
+  />
+  <button class="btn mt-2 mr-0" (click)="newHeadline(headlineInput)">
+    {{ 'COMMON.CHANGE' | translate }}
+  </button>
+</div>

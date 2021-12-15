@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { environment } from '../../../../../environments/environment';
-import { Post } from '../../post-list/post.service';
+import { Post } from '../../post.service';
 
 @Component({
   selector: 'app-post-list',
@@ -9,16 +9,16 @@ import { Post } from '../../post-list/post.service';
   styleUrls: ['./post-list.component.scss'],
 })
 export class PostListComponent implements OnInit {
-  @Input()
-  posts: Post[] = [];
+  // @Input()
+  // posts: Post[] = [];
 
-  @Input()
-  headline: string = '';
+  // @Input()
+  // headline: string = '';
 
-  headlineInput: string = '';
+  // headlineInput: string = '';
 
-  @Output()
-  newHeadlineEvent = new EventEmitter<string>();
+  // @Output()
+  // newHeadlineEvent = new EventEmitter<string>();
 
   @Output()
   removePostEvent = new EventEmitter<number>();
@@ -36,10 +36,10 @@ export class PostListComponent implements OnInit {
     this.translateService.use(environment.defaultLocale);
   }
 
-  newHeadline(value: string): void {
-    this.newHeadlineEvent.emit(value);
-    this.headlineInput = '';
-  }
+  // newHeadline(value: string): void {
+  //   this.newHeadlineEvent.emit(value);
+  //   this.headlineInput = '';
+  // }
 
   removePost(id: number): void {
     this.removePostEvent.emit(id);
