@@ -1,20 +1,25 @@
 <nav class="navbar bg-dark">
-  <h1>
-    <a [routerLink]="['/']">Post App</a>
-  </h1>
+  <div class="container">
+    <h1>
+      <a [routerLink]="['/']">Post App</a>
+    </h1>
 
-  <div id="menuToggle">
-    <input type="checkbox" />
+    <div id="menuToggle">
+      <input type="checkbox" />
 
-    <span></span>
-    <span></span>
-    <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
 
-    <ul id="menu">
-      <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-        <a [routerLink]="['/']">Home</a>
-      </li>
-      <li routerLinkActive="active"><a routerLink="/posts">Posts</a></li>
-    </ul>
+      <ul id="menu">
+        <li
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a [routerLink]="['/']">Home</a>
+        </li>
+        <li routerLinkActive="active"><a routerLink="/posts">Posts</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
