@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { PostListComponent } from './post-list.component';
+import { PostListComponent } from '../components/post-list/post-list.component';
 import { PostService } from './post.service';
 
 @NgModule({
