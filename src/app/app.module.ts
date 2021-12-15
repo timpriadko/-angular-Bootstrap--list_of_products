@@ -18,6 +18,7 @@ import { MissingTranslationService } from './core/services/translate-service/Mis
 import { HeaderComponent } from './core/header/header.component';
 import { NavigationComponent } from './core/header/navigation/navigation.component';
 import { ErrorPageComponent } from './core/error-page/error-page.component';
+import { GoToPostsComponent } from './modules/home/components/go-to-posts/go-to-posts.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ErrorPageComponent } from './core/error-page/error-page.component';
     HomepageComponent,
     ErrorPageComponent,
     PostPageComponent,
+    GoToPostsComponent,
   ],
   imports: [
     BrowserModule,

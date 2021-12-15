@@ -7,9 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./homepage.component.scss'],
 })
 export class HomepageComponent {
-  constructor(private router: Router) {}
-
-  goToPostsPage() {
-    this.router.navigate(['/posts']);
-  }
+  // constructor(private router: Router) {}
+  // goToPostsPage() {
+  //   this.router.navigate(['/posts']);
+  // }
 }
