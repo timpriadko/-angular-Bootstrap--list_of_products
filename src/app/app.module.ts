@@ -20,6 +20,7 @@ import { ErrorPageComponent } from './core/error-page/error-page.component';
 import { GoToPostsComponent } from './modules/home/components/go-to-posts/go-to-posts.component';
 import { PostListModule } from './modules/post/post.module';
 import { HeadlineComponent } from './modules/post/components/headline/headline.component';
+import { FooterComponent } from './core/footer/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HeadlineComponent } from './modules/post/components/headline/headline.c
     PostPageComponent,
     GoToPostsComponent,
     HeadlineComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
