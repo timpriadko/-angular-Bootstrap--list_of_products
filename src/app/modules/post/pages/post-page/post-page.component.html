@@ -1,7 +1,10 @@
-<app-headline></app-headline>
-<app-post-list
+<app-headline
   [headline]="currentHeadline"
   (newHeadlineEvent)="changeHeadline($event)"
+>
+</app-headline>
+
+<app-post-list
   [posts]="fetchedPosts"
   (removePostEvent)="removePost($event)"
 ></app-post-list>

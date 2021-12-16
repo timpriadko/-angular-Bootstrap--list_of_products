@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { environment } from '../../../../../environments/environment';
 import { Post, PostService } from '../../post.service';
@@ -8,7 +8,7 @@ import { Post, PostService } from '../../post.service';
   templateUrl: './post-page.component.html',
   styleUrls: ['./post-page.component.scss'],
 })
-export class PostPageComponent {
+export class PostPageComponent implements OnInit {
   currentHeadline = 'Headline';
   headline: string = '';
   fetchedPosts: Post[] = [];
@@ -43,5 +43,9 @@ export class PostPageComponent {
     this.postService.removePost(id).subscribe(() => {
       this.fetchedPosts = this.fetchedPosts.filter((post) => post.id !== id);
     });
+  }
+
+  trackByFn(item): number {
+    return item.id;
   }
 }

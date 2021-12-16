@@ -9,16 +9,8 @@ import { Post } from '../../post.service';
   styleUrls: ['./post-list.component.scss'],
 })
 export class PostListComponent implements OnInit {
-  // @Input()
-  // posts: Post[] = [];
-
-  // @Input()
-  // headline: string = '';
-
-  // headlineInput: string = '';
-
-  // @Output()
-  // newHeadlineEvent = new EventEmitter<string>();
+  @Input()
+  posts: Post[] = [];
 
   @Output()
   removePostEvent = new EventEmitter<number>();
@@ -35,11 +27,6 @@ export class PostListComponent implements OnInit {
   ngOnInit(): void {
     this.translateService.use(environment.defaultLocale);
   }
-
-  // newHeadline(value: string): void {
-  //   this.newHeadlineEvent.emit(value);
-  //   this.headlineInput = '';
-  // }
 
   removePost(id: number): void {
     this.removePostEvent.emit(id);
