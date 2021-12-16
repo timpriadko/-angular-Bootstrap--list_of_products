@@ -21,7 +21,6 @@ export class PostListComponent implements OnInit {
 
     const browserLang = translateService.getBrowserLang();
     translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
-    console.log(browserLang);
   }
 
   ngOnInit(): void {

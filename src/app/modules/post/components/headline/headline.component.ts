@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { environment } from '../../../../../environments/environment';
 import { Post } from '../../post.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-headline',
@@ -20,13 +21,16 @@ export class HeadlineComponent {
   @Output()
   newHeadlineEvent = new EventEmitter<string>();
 
+  displayInputBlock: boolean = false;
+
+  tooltipText: string = 'Click the headline text to change it';
+
   constructor(public translateService: TranslateService) {
     translateService.addLangs(['en', 'fr']);
     translateService.setDefaultLang('en');
 
     const browserLang = translateService.getBrowserLang();
     translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
-    console.log(browserLang);
   }
 
   ngOnInit(): void {
@@ -36,5 +40,13 @@ export class HeadlineComponent {
   newHeadline(value: string): void {
     this.newHeadlineEvent.emit(value);
     this.headlineInput = '';
+  }
+
+  displayInputBlockHandler(): void {
+    this.displayInputBlock = !this.displayInputBlock;
+    this.tooltipText =
+      this.displayInputBlock === true
+        ? 'Click the headline text to close the input block'
+        : 'Click the headline text to change it';
   }
 }

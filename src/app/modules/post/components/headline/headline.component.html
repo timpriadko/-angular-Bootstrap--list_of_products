@@ -1,6 +1,13 @@
-<h1 class="text-center">{{ headline }}</h1>
+<h1
+  class="text-center"
+  (click)="displayInputBlockHandler()"
+  placement="top"
+  ngbTooltip="{{ tooltipText }}"
+>
+  {{ headline }}
+</h1>
 
-<div class="card d-none">
+<div *ngIf="displayInputBlock" class="card">
   <input
     type="text"
     placeholder="{{ 'COMMON.HEADLINE' | translate }}"
