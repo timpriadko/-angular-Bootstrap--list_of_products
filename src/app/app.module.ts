@@ -13,18 +13,17 @@ import { HttpLoaderFactory } from './libs/settings/HttpLoaderFactory';
 import { AppRoutingModule } from './app-routing.module';
 import { PostPageComponent } from './modules/post/pages/post-page/post-page.component';
 import { HomepageComponent } from './modules/home/pages/homepage/homepage.component';
-import { PostListComponent } from './modules/post/components/post-list/post-list.component';
 import { MissingTranslationService } from './core/services/translate-service/MissingTranslationService';
 import { HeaderComponent } from './core/header/header.component';
 import { NavigationComponent } from './core/header/navigation/navigation.component';
 import { ErrorPageComponent } from './core/error-page/error-page.component';
 import { GoToPostsComponent } from './modules/home/components/go-to-posts/go-to-posts.component';
+import { PostListModule } from './modules/post/post.module';
 import { HeadlineComponent } from './modules/post/components/headline/headline.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostListComponent,
     HeaderComponent,
     NavigationComponent,
     HomepageComponent,
@@ -38,6 +37,7 @@ import { HeadlineComponent } from './modules/post/components/headline/headline.c
     HttpClientModule,
     NgbModule,
     FormsModule,
+    PostListModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
