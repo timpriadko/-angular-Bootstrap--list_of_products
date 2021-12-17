@@ -12,6 +12,9 @@ export class PostItemComponent {
   @Input()
   post: Post;
 
+  @Input()
+  index: number;
+
   constructor(public translateService: TranslateService) {
     translateService.addLangs(['en', 'fr']);
     translateService.setDefaultLang('en');
