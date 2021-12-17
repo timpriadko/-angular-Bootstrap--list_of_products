@@ -1,6 +1,8 @@
 <div class="col-xl-12 d-flex flex-column">
-  <app-post-item
-    *ngFor="let post of posts; trackBy: trackByFn; let idx = index"
-    (newHeadlineEvent)="changeHeadline($event)"
-  ></app-post-item>
+  <ng-container *ngFor="let post of posts; trackBy: trackByFn; let idx = index">
+    <app-post-item
+      [post]="post"
+      (newHeadlineEvent)="changeHeadline($event)"
+    ></app-post-item>
+  </ng-container>
 </div>
