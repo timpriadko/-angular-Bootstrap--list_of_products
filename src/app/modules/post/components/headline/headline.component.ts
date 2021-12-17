@@ -30,10 +30,11 @@ export class HeadlineComponent {
 
     const browserLang = translateService.getBrowserLang();
     translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+    console.log(browserLang);
   }
 
   ngOnInit(): void {
-    this.translateService.use(environment.defaultLocale);
+    // this.translateService.use(environment.defaultLocale);
   }
 
   newHeadline(value: string): void {
