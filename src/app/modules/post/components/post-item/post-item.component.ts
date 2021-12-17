@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { environment } from '../../../../../environments/environment';
 import { Post } from '../../post.service';
@@ -14,6 +14,13 @@ export class PostItemComponent {
 
   @Input()
   index: number;
+
+  @Output()
+  removePostEvent = new EventEmitter<number>();
+
+  removePost(id: number): void {
+    this.removePostEvent.emit(id);
+  }
 
   constructor(public translateService: TranslateService) {
     translateService.addLangs(['en', 'fr']);
