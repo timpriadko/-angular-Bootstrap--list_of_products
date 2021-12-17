@@ -2,6 +2,10 @@
   "COMMON": {
     "DELETE": "Effacer",
     "CHANGE": "Changer",
-    "HEADLINE": "Gros titre"
+    "HEADLINE": "Gros titre",
+    "APP_NAME": "Poste candidature",
+    "HOME": "Page d'accueil",
+    "POSTS": "Des Postes",
+    "FOOTER": "Bas de page"
   }
 }

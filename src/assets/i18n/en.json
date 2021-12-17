@@ -2,6 +2,10 @@
   "COMMON": {
     "DELETE": "Delete",
     "CHANGE": "Change",
-    "HEADLINE": "Headline"
+    "HEADLINE": "Headline",
+    "APP_NAME": "Post App",
+    "HOME": "Home",
+    "POSTS": "Posts",
+    "FOOTER": "Footer"
   }
 }

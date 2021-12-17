@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-  constructor() {}
+  constructor(public translateService: TranslateService) {
+    translateService.addLangs(['en', 'fr']);
+    translateService.setDefaultLang('en');
+
+    const browserLang = translateService.getBrowserLang();
+    translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+  }
 }
