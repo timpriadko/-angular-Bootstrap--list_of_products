@@ -1,26 +1,6 @@
 <div class="col-xl-12 d-flex flex-column">
-  <!-- <div
-    class="card col-md-8 mt-3 border border-primary"
+  <app-post-item
     *ngFor="let post of posts; trackBy: trackByFn; let idx = index"
-    [ngClass]="{
-      border: idx % 2,
-      'align-self-end': idx % 2,
-      'border-warning': idx % 2,
-      'border-success': idx % 3
-    }"
-  >
-    <div class="card-body">
-      <h5 class="card-title">
-        {{ post.title }}
-      </h5>
-      <p class="card-text">
-        {{ post.body }}
-      </p>
-      <div class="d-flex justify-content-end">
-        <button class="btn btn-danger" (click)="removePost(post.id)">
-          {{ 'COMMON.DELETE' | translate }}
-        </button>
-      </div>
-    </div>
-  </div> -->
+    (newHeadlineEvent)="changeHeadline($event)"
+  ></app-post-item>
 </div>

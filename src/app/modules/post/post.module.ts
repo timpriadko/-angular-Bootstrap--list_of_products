@@ -8,14 +8,14 @@ import {
 } from '@ngx-translate/core';
 import { MissingTranslationService } from '../../core/services/translate-service/MissingTranslationService';
 import { HttpLoaderFactory } from '../../libs/settings/HttpLoaderFactory';
-// import { PostItemComponent } from './components/post-item/post-item.component';
+import { PostItemComponent } from './components/post-item/post-item.component';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { PostService } from './post.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [PostListComponent],
+  declarations: [PostListComponent, PostItemComponent],
   imports: [
     CommonModule,
     NgbModule,
