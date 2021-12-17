@@ -22,7 +22,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchPosts();
-    this.translateService.use(environment.defaultLocale);
+    const browserLang = this.translateService.getBrowserLang();
+    this.translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
   }
 
   changeHeadline(newHeadline: string): void {
