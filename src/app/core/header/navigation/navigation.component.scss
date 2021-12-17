@@ -1,4 +1,16 @@
+.navbar {
+  h1 {
+    margin: 0;
+  }
 
+  select {
+    width: auto;
+    padding: 0.2rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    margin: 0 1.3rem 0 auto;
+  }
+}
 
 // hamburger menu styles
 #menuToggle {
