@@ -4,8 +4,10 @@
     "CHANGE": "Changer",
     "HEADLINE": "Gros titre",
     "APP_NAME": "Poste candidature",
+    "HOME_PAGE": "Page d'accueil",
     "HOME": "Page d'accueil",
     "POSTS": "Des Postes",
-    "FOOTER": "Bas de page"
+    "FOOTER": "Bas de page",
+    "GO_TO_POSTS": "Aller aux messages"
   }
 }
