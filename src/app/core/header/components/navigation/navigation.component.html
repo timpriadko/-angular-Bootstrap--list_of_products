@@ -24,6 +24,10 @@
           <a routerLink="/posts">{{ 'COMMON.POSTS' | translate }}</a>
         </li>
       </ul>
+
+      <app-menu
+        *ngFor="let menuItem of menuItems; trackBy: trackByFn; let i = index"
+      ></app-menu>
     </div>
   </div>
 </nav>

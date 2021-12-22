@@ -2,13 +2,13 @@ import { Component, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-navigation',
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss'],
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.scss'],
 })
-export class NavigationComponent {
+export class MenuComponent {
   @Input()
-  menuItems: Object[];
+  menuItem: Object;
 
   constructor(public translate: TranslateService) {
     translate.addLangs(['en', 'fr']);
@@ -16,9 +16,5 @@ export class NavigationComponent {
 
     const browserLang = translate.getBrowserLang();
     translate.use(browserLang.match(/fr|fr/) ? 'fr' : 'en');
-  }
-
-  trackByFn(item): number {
-    return item.id;
   }
 }

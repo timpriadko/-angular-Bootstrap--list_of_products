@@ -6,5 +6,29 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  languages: [
+    {
+      label: 'English';
+      value: 'en';
+    },
+    {
+      label: 'French';
+      value: 'fr';
+    }
+  ];
+
+  menuItems: [
+    {
+      label: 'COMMON.HOME';
+      link: '/';
+      id: 1;
+    },
+    {
+      label: 'COMMON.POSTS';
+      link: '/posts';
+      id: 2;
+    }
+  ];
+
   constructor() {}
 }
