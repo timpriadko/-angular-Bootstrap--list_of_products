@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Post } from '../../services/post.service';
 
 @Component({
   selector: 'app-headline',
