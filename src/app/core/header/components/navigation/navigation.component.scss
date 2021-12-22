@@ -1,16 +1,6 @@
 .navbar {
   h1 {
-    margin: 0;
-  }
-
-  select {
-    width: auto;
-    padding: 0.2rem;
-    font-size: 1.2rem;
-    border: 1px solid #ccc;
-    margin: 0 1.3rem 0 auto;
-    background: #000;
-    color: #fff;
+    margin: 0 auto 0 0;
   }
 }
 
@@ -19,9 +9,7 @@
   @media (max-width: 991.98px) {
     display: block;
     position: relative;
-
     z-index: 1;
-
     -webkit-user-select: none;
     user-select: none;
   }

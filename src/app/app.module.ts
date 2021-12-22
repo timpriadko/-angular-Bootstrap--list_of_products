@@ -21,6 +21,7 @@ import { HomepageComponent } from './modules/home/home.component';
 import { HomeModule } from './modules/home/home.module';
 import { PostPageComponent } from './modules/post/post.component';
 import { NavigationComponent } from './core/header/components/navigation/navigation.component';
+import { LanguageSelectorComponent } from './core/header/components/language-selector/language-selector.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NavigationComponent } from './core/header/components/navigation/navigat
     PostPageComponent,
     HeadlineComponent,
     FooterComponent,
+    LanguageSelectorComponent,
   ],
   imports: [
     BrowserModule,
