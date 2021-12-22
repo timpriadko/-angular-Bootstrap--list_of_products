@@ -10,9 +10,10 @@ import { MissingTranslationService } from '../../core/services/translate-service
 import { HttpLoaderFactory } from '../../libs/settings/HttpLoaderFactory';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { GoToPostsComponent } from './components/go-to-posts/go-to-posts.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [GoToPostsComponent],
   imports: [
     CommonModule,
     NgbModule,
@@ -31,7 +32,7 @@ import { FormsModule } from '@angular/forms';
       defaultLanguage: 'en',
     }),
   ],
-  exports: [],
+  exports: [GoToPostsComponent],
   providers: [],
 })
 export class HomeModule {}

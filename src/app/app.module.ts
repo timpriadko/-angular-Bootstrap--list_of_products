@@ -16,7 +16,6 @@ import { MissingTranslationService } from './core/services/translate-service/Mis
 import { HeaderComponent } from './core/header/header.component';
 import { NavigationComponent } from './core/header/navigation/navigation.component';
 import { ErrorPageComponent } from './core/error-page/error-page.component';
-import { GoToPostsComponent } from './modules/home/components/go-to-posts/go-to-posts.component';
 import { PostListModule } from './modules/post/post.module';
 import { HeadlineComponent } from './modules/post/components/headline/headline.component';
 import { FooterComponent } from './core/footer/footer/footer.component';
@@ -31,7 +30,6 @@ import { HomeModule } from './modules/home/home.module';
     HomepageComponent,
     ErrorPageComponent,
     PostPageComponent,
-    GoToPostsComponent,
     HeadlineComponent,
     FooterComponent,
   ],
