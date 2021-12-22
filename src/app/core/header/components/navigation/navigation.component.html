@@ -25,9 +25,10 @@
         </li>
       </ul>
 
-      <!-- <app-menu
-        *ngFor="let menuItem of menuItemsArr; trackBy: trackByFn; let i = index"
-      ></app-menu> -->
+      <app-menu
+        *ngFor="let menuItem of menuItems; trackBy: trackByFn; let i = index"
+        [menuItem]="menuItem"
+      ></app-menu>
     </div>
   </div>
 </nav>

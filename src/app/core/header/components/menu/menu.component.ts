@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -6,7 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
 })
-export class MenuComponent {
+export class MenuComponent implements OnInit {
   @Input()
   menuItem: Object;
 
@@ -16,5 +16,9 @@ export class MenuComponent {
 
     const browserLang = translate.getBrowserLang();
     translate.use(browserLang.match(/fr|fr/) ? 'fr' : 'en');
+  }
+
+  ngOnInit() {
+    console.log(this.menuItem);
   }
 }
