@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavigationComponent implements OnInit {
   @Input()
-  menuItems: Object[];
+  menuItemsArr: Object[];
 
   constructor(public translate: TranslateService) {
     translate.addLangs(['en', 'fr']);
@@ -19,7 +19,7 @@ export class NavigationComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.menuItems);
+    console.log(this.menuItemsArr);
   }
 
   trackByFn(item): number {
