@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Post, PostService } from './post.service';
+import { Post, PostService } from './services/post.service';
 
 @Component({
   selector: 'app-post-page',

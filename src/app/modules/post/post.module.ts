@@ -10,9 +10,9 @@ import { MissingTranslationService } from '../../core/services/translate-service
 import { HttpLoaderFactory } from '../../libs/settings/HttpLoaderFactory';
 import { PostItemComponent } from './components/post-item/post-item.component';
 import { PostListComponent } from './components/post-list/post-list.component';
-import { PostService } from './post.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { PostService } from './services/post.service';
 
 @NgModule({
   declarations: [PostListComponent, PostItemComponent],
