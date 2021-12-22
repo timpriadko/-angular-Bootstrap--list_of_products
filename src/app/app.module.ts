@@ -12,7 +12,6 @@ import {
 import { HttpLoaderFactory } from './libs/settings/HttpLoaderFactory';
 import { AppRoutingModule } from './app-routing.module';
 import { PostPageComponent } from './modules/post/pages/post-page/post-page.component';
-import { HomepageComponent } from './modules/home/pages/homepage/homepage.component';
 import { MissingTranslationService } from './core/services/translate-service/MissingTranslationService';
 import { HeaderComponent } from './core/header/header.component';
 import { NavigationComponent } from './core/header/navigation/navigation.component';
@@ -21,6 +20,7 @@ import { GoToPostsComponent } from './modules/home/components/go-to-posts/go-to-
 import { PostListModule } from './modules/post/post.module';
 import { HeadlineComponent } from './modules/post/components/headline/headline.component';
 import { FooterComponent } from './core/footer/footer/footer.component';
+import { HomepageComponent } from './modules/home/home.component';
 
 @NgModule({
   declarations: [
