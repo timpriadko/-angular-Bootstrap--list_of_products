@@ -14,21 +14,11 @@
       <span></span>
 
       <ul id="menu">
-        <li
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
-          <a [routerLink]="['/']">{{ 'COMMON.HOME' | translate }}</a>
-        </li>
-        <li routerLinkActive="active">
-          <a routerLink="/posts">{{ 'COMMON.POSTS' | translate }}</a>
-        </li>
+        <app-menu
+          *ngFor="let menuItem of menuItems; trackBy: trackByFn; let i = index"
+          [menuItem]="menuItem"
+        ></app-menu>
       </ul>
-
-      <app-menu
-        *ngFor="let menuItem of menuItems; trackBy: trackByFn; let i = index"
-        [menuItem]="menuItem"
-      ></app-menu>
     </div>
   </div>
 </nav>

@@ -130,15 +130,10 @@
     transform: translate(31%, 22px);
 
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-
-    li {
-      padding: 10px 0;
-      font-size: 22px;
-    }
   }
 
-  li {
-    & + li {
+  & > * {
+    & + * {
       margin-left: 10px;
     }
   }
