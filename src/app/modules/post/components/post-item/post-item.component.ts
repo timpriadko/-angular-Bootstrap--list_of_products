@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { environment } from '../../../../../environments/environment';
-import { Post } from '../../post.service';
+import { Post } from '../../services/post.service';
 
 @Component({
   selector: 'app-post-item',
