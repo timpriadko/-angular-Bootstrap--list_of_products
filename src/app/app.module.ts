@@ -21,6 +21,7 @@ import { PostListModule } from './modules/post/post.module';
 import { HeadlineComponent } from './modules/post/components/headline/headline.component';
 import { FooterComponent } from './core/footer/footer/footer.component';
 import { HomepageComponent } from './modules/home/home.component';
+import { HomeModule } from './modules/home/home.module';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { HomepageComponent } from './modules/home/home.component';
     HttpClientModule,
     NgbModule,
     FormsModule,
+    HomeModule,
     PostListModule,
     TranslateModule.forRoot({
       loader: {
