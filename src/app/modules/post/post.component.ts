@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Post, PostService } from '../../post.service';
+import { Post, PostService } from './post.service';
 
 @Component({
   selector: 'app-post-page',
-  templateUrl: './post-page.component.html',
-  styleUrls: ['./post-page.component.scss'],
+  templateUrl: './post.component.html',
+  styleUrls: ['./post.component.scss'],
 })
 export class PostPageComponent implements OnInit {
   currentHeadline = 'Headline';
