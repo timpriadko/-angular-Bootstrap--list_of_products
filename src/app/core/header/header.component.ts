@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   languages: [
     {
       label: 'English';
@@ -31,4 +31,8 @@ export class HeaderComponent {
   ];
 
   constructor() {}
+
+  ngOnInit() {
+    console.log(this.menuItems);
+  }
 }
