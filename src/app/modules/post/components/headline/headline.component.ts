@@ -43,4 +43,6 @@ export class HeadlineComponent {
         ? 'Click the headline text to close the input block'
         : 'Click the headline text to change it';
   }
+
+  // TODO: change Headline => move to the modal
 }
