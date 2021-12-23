@@ -7,11 +7,11 @@
     <app-language-selector></app-language-selector>
 
     <div id="menuToggle">
-      <input type="checkbox" />
-
-      <span></span>
-      <span></span>
-      <span></span>
+      <div class="burger" [class.active]="menuActive" (click)="burgerHandler()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
       <ul id="menu">
         <app-menu
