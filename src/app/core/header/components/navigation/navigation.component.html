@@ -13,7 +13,7 @@
         <span></span>
       </div>
 
-      <ul id="menu">
+      <ul id="menu" [class.active]="menuActive">
         <app-menu
           *ngFor="let menuItem of menuItems; trackBy: trackByFn; let i = index"
           [menuItem]="menuItem"
