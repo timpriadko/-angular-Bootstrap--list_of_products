@@ -14,4 +14,6 @@ export class LanguageSelectorComponent {
     const browserLang = translate.getBrowserLang();
     translate.use(browserLang.match(/fr|fr/) ? 'fr' : 'en');
   }
+
+  // TODO: store selected language to be able to display translated content on the selected language
 }
