@@ -98,13 +98,13 @@
     /* to stop flickering of text in safari */
 
     transform-origin: 0% 0%;
-    transform: translate(31%, 22px);
+    transform: translate(31%, 34px);
 
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 
   &.active {
-    transform: translate(-83%, 22px);
+    transform: translate(-78%, 34px);
   }
 
   & > * {
