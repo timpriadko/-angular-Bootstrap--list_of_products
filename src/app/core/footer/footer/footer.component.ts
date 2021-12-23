@@ -14,4 +14,6 @@ export class FooterComponent {
     const browserLang = translateService.getBrowserLang();
     translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
   }
+
+  // TODO: add condition for the footer position on the page
 }
