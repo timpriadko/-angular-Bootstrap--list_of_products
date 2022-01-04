@@ -14,10 +14,10 @@
       </div>
 
       <ul id="menu" [class.active]="menuActive">
-        <app-menu
+        <app-menu-item
           *ngFor="let menuItem of menuItems; trackBy: trackByFn; let i = index"
           [menuItem]="menuItem"
-        ></app-menu>
+        ></app-menu-item>
       </ul>
     </div>
   </div>

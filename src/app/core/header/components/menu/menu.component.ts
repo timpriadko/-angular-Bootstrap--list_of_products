@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-menu',
+  selector: 'app-menu-item',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
 })
