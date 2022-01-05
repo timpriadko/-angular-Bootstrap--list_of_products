@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-language-selector',
@@ -7,12 +6,20 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./language-selector.component.scss'],
 })
 export class LanguageSelectorComponent {
-  constructor(public translate: TranslateService) {
-    translate.addLangs(['en', 'fr']);
-    translate.setDefaultLang('en');
+  @Input()
+  langs: String[];
 
-    const browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match(/fr|fr/) ? 'fr' : 'en');
+  @Input()
+  currentLang: String;
+
+  @Output()
+  newLangEvent = new EventEmitter<string>();
+
+  constructor() {}
+
+  newLangHandler(value: string): void {
+    this.newLangEvent.emit(value);
+    console.log(['newLang', value]);
   }
 
   // TODO: store selected language to be able to display translated content on the selected language

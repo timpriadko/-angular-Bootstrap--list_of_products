@@ -1,8 +1,8 @@
-<select #langSelect (change)="translate.use(langSelect.value)">
+<select #langSelect (change)="newLangHandler(langSelect.value)">
   <option
-    *ngFor="let lang of translate.getLangs()"
+    *ngFor="let lang of langs"
     [value]="lang"
-    [selected]="lang === translate.currentLang"
+    [selected]="lang === currentLang"
   >
     {{ lang }}
   </option>

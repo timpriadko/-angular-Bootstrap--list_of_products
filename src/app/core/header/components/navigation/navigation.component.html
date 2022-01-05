@@ -4,7 +4,11 @@
       <a [routerLink]="['/']">{{ 'Common.APP_NAME' | translate }}</a>
     </h1>
 
-    <app-language-selector></app-language-selector>
+    <app-language-selector
+      [langs]="langs"
+      [currentLang]="currentLang"
+      (newLangEvent)="changeLangHandler($event)"
+    ></app-language-selector>
 
     <div id="menuToggle">
       <div class="burger" [class.active]="menuActive" (click)="burgerHandler()">

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Language } from '../../../constants';
 
 @Component({
   selector: 'app-navigation',
@@ -12,12 +13,19 @@ export class NavigationComponent {
 
   menuActive: Boolean = false;
 
-  constructor(public translate: TranslateService) {
-    translate.addLangs(['en', 'fr']);
-    translate.setDefaultLang('en');
+  langs: String[] = this.translate.getLangs();
 
-    const browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match(/fr|fr/) ? 'fr' : 'en');
+  currentLang: string = this.translate.currentLang;
+
+  constructor(public translate: TranslateService) {
+    translate.addLangs([Language.EN, Language.FR]);
+    translate.setDefaultLang(Language.EN);
+
+    this.translate.use(this.currentLang);
+  }
+
+  changeLangHandler(newLang: string): void {
+    this.translate.use(newLang);
   }
 
   trackByFn(item): number {
@@ -26,6 +34,5 @@ export class NavigationComponent {
 
   burgerHandler(): void {
     this.menuActive = !this.menuActive;
-    console.log(this.menuActive);
   }
 }
