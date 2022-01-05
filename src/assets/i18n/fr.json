@@ -1,5 +1,5 @@
 {
-  "COMMON": {
+  "Common": {
     "DELETE": "Effacer",
     "CHANGE": "Changer",
     "HEADLINE": "Gros titre",
@@ -9,5 +9,9 @@
     "POSTS": "Des Postes",
     "FOOTER": "Bas de page",
     "GO_TO_POSTS": "Aller aux messages"
+  },
+  "Language": {
+    "EN": "Anglais",
+    "FR": "Français"
   }
 }

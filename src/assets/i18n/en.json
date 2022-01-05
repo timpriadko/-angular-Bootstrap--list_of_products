@@ -1,5 +1,5 @@
 {
-  "COMMON": {
+  "Common": {
     "DELETE": "Delete",
     "CHANGE": "Change",
     "HEADLINE": "Headline",
@@ -9,5 +9,9 @@
     "POSTS": "Posts",
     "FOOTER": "Footer",
     "GO_TO_POSTS": "Go to Posts"
+  },
+  "Language": {
+    "EN": "English",
+    "FR": "Franch"
   }
 }

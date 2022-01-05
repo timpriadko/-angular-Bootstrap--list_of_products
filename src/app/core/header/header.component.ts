@@ -19,12 +19,12 @@ export class HeaderComponent {
 
   menuItems: Object[] = [
     {
-      label: 'COMMON.HOME',
+      label: 'Common.HOME',
       link: '/',
       id: 1,
     },
     {
-      label: 'COMMON.POSTS',
+      label: 'Common.POSTS',
       link: '/posts',
       id: 2,
     },
