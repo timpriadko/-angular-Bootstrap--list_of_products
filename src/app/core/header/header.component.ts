@@ -6,17 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  languages: Object[] = [
-    {
-      label: 'English',
-      value: 'en',
-    },
-    {
-      label: 'French',
-      value: 'fr',
-    },
-  ];
-
   menuItems: Object[] = [
     {
       label: 'Common.HOME',
