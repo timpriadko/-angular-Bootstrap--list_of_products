@@ -7,7 +7,15 @@
 </div>
 
 <app-footer>
-  <div class="text-center">
-    <app-go-to-posts></app-go-to-posts>
-  </div>
+  <ng-container role="navigation">
+    <div class="text-center">
+      <app-go-to-posts></app-go-to-posts>
+    </div>
+  </ng-container>
+
+  <ng-container role="copyrights">
+    <div class="m-2">
+      {{ copyrightText }}
+    </div>
+  </ng-container>
 </app-footer>
