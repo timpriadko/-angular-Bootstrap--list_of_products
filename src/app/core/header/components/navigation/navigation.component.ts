@@ -35,4 +35,6 @@ export class NavigationComponent {
   burgerHandler(): void {
     this.menuActive = !this.menuActive;
   }
+
+  // TODO: move "Burger" menu to separated Dumb component
 }
