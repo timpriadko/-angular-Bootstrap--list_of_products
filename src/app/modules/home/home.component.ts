@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Copyright } from '../../core/constants';
+import { TranslateService } from '@ngx-translate/core';
+import { Copyright, Language } from '../../core/constants';
 
 @Component({
   selector: 'app-homepage',
@@ -7,5 +8,12 @@ import { Copyright } from '../../core/constants';
   styleUrls: ['./home.component.scss'],
 })
 export class HomepageComponent {
-  copyrightText: string = Copyright.TEXT;
+  currentLang: string = this.translate.currentLang;
+
+  constructor(public translate: TranslateService) {
+    translate.addLangs([Language.EN, Language.FR]);
+    translate.setDefaultLang(Language.EN);
+
+    this.translate.use(this.currentLang);
+  }
 }
