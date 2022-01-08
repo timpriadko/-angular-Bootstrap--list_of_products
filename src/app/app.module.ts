@@ -22,7 +22,7 @@ import { HomeModule } from './modules/home/home.module';
 import { PostPageComponent } from './modules/post/post.component';
 import { NavigationComponent } from './core/header/components/navigation/navigation.component';
 import { LanguageSelectorComponent } from './core/header/components/language-selector/language-selector.component';
-import { MenuComponent } from './core/header/components/menu/menu.component';
+import { MenuItemComponent } from './core/header/components/menu/menu-item.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import { MenuComponent } from './core/header/components/menu/menu.component';
     HeadlineComponent,
     FooterComponent,
     LanguageSelectorComponent,
-    MenuComponent,
+    MenuItemComponent,
   ],
   imports: [
     BrowserModule,

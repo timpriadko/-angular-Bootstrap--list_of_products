@@ -3,10 +3,10 @@ import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menu-item',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
+  templateUrl: './menu-item.component.html',
+  styleUrls: ['./menu-item.component.scss'],
 })
-export class MenuComponent {
+export class MenuItemComponent {
   @Input()
   menuItem: Object;
 
