@@ -11,6 +11,7 @@ import { HttpLoaderFactory } from '../../libs/settings/HttpLoaderFactory';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { GoToPostsComponent } from './components/go-to-posts/go-to-posts.component';
+import { environment } from '../../../environments/environment';
 
 @NgModule({
   declarations: [GoToPostsComponent],
@@ -29,7 +30,7 @@ import { GoToPostsComponent } from './components/go-to-posts/go-to-posts.compone
         useClass: MissingTranslationService,
       },
       useDefaultLang: true,
-      defaultLanguage: 'en',
+      defaultLanguage: environment.defaultLocale,
     }),
   ],
   exports: [GoToPostsComponent],

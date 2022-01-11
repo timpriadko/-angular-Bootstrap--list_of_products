@@ -13,6 +13,7 @@ import { PostListComponent } from './components/post-list/post-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { PostService } from './services/post.service';
+import { environment } from '../../../environments/environment';
 
 @NgModule({
   declarations: [PostListComponent, PostItemComponent],
@@ -31,7 +32,7 @@ import { PostService } from './services/post.service';
         useClass: MissingTranslationService,
       },
       useDefaultLang: true,
-      defaultLanguage: 'en',
+      defaultLanguage: environment.defaultLocale,
     }),
   ],
   exports: [PostListComponent],

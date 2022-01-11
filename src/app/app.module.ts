@@ -23,6 +23,7 @@ import { PostPageComponent } from './modules/post/post.component';
 import { NavigationComponent } from './core/header/components/navigation/navigation.component';
 import { LanguageSelectorComponent } from './core/header/components/language-selector/language-selector.component';
 import { MenuItemComponent } from './core/header/components/menu/menu-item.component';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,7 @@ import { MenuItemComponent } from './core/header/components/menu/menu-item.compo
         useClass: MissingTranslationService,
       },
       useDefaultLang: true,
-      defaultLanguage: 'en',
+      defaultLanguage: environment.defaultLocale,
     }),
     AppRoutingModule,
   ],
