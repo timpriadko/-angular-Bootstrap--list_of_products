@@ -27,7 +27,7 @@ export class HeadlineComponent {
   tooltipText: string = 'Click the headline text to change it';
 
   constructor(public translate: TranslateService) {
-    this.translate.use(this.currentLang);
+    translate.use(this.currentLang);
   }
 
   newHeadline(value: string): void {

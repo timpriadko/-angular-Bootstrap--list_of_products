@@ -14,6 +14,6 @@ export class HomepageComponent {
     translate.addLangs([Language.EN, Language.FR]);
     translate.setDefaultLang(Language.EN);
 
-    this.translate.use(this.currentLang);
+    translate.use(this.currentLang);
   }
 }

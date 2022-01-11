@@ -14,6 +14,6 @@ export class MenuItemComponent {
   menuItem: Object;
 
   constructor(public translate: TranslateService) {
-    this.translate.use(this.currentLang);
+    translate.use(this.currentLang);
   }
 }

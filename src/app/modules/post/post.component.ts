@@ -17,11 +17,12 @@ export class PostPageComponent implements OnInit {
   constructor(
     private postService: PostService,
     public translate: TranslateService
-  ) {}
+  ) {
+    translate.use(this.currentLang);
+  }
 
   ngOnInit(): void {
     this.fetchPosts();
-    this.translate.use(this.currentLang);
   }
 
   changeHeadline(newHeadline: string): void {

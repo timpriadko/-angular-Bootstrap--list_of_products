@@ -24,9 +24,7 @@ export class PostItemComponent {
     this.removePostEvent.emit(id);
   }
 
-  constructor(public translate: TranslateService) {}
-
-  ngOnInit(): void {
-    this.translate.use(this.currentLang);
+  constructor(public translate: TranslateService) {
+    translate.use(this.currentLang);
   }
 }

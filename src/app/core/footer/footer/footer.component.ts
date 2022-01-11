@@ -10,7 +10,7 @@ export class FooterComponent {
   currentLang: string = this.translate.currentLang;
 
   constructor(public translate: TranslateService) {
-    this.translate.use(this.currentLang);
+    translate.use(this.currentLang);
   }
 
   // TODO: add condition for the footer position on the page
