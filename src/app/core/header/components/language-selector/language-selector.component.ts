@@ -1,9 +1,16 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 
 @Component({
   selector: 'app-language-selector',
   templateUrl: './language-selector.component.html',
   styleUrls: ['./language-selector.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LanguageSelectorComponent {
   @Input()
@@ -19,7 +26,6 @@ export class LanguageSelectorComponent {
 
   newLangHandler(value: string): void {
     this.newLangEvent.emit(value);
-    console.log(['newLang', value]);
   }
 
   // TODO: store selected language to be able to display translated content on the selected language
