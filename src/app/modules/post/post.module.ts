@@ -14,6 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { PostService } from './services/post.service';
 import { environment } from '../../../environments/environment';
+import { NgbModalModule } from '../../core/modal/modal.module';
 
 @NgModule({
   declarations: [PostListComponent, PostItemComponent],
@@ -34,6 +35,7 @@ import { environment } from '../../../environments/environment';
       useDefaultLang: true,
       defaultLanguage: environment.defaultLocale,
     }),
+    NgbModalModule,
   ],
   exports: [PostListComponent],
   providers: [PostService],

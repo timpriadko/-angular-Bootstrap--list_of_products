@@ -23,6 +23,8 @@ export class HeadlineComponent {
 
   displayInputBlock: boolean = false;
 
+  modalOpened: boolean = false;
+
   // TODO: change content str to translation
   tooltipText: string = 'Click the headline text to change it';
 
@@ -45,4 +47,18 @@ export class HeadlineComponent {
   }
 
   // TODO: change Headline => move to the modal
+
+  openModalHandler(): void {
+    this.modalOpened = !this.modalOpened;
+    console.log(this.modalOpened);
+  }
+
+  closeModalHandler(value: boolean): void {
+    console.log(value);
+    this.modalOpened = value;
+  }
+
+  updateHeadlineOnModalChange(value: string): void {
+    console.log(value);
+  }
 }
