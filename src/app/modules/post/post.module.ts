@@ -35,7 +35,6 @@ import { NgbModalModule } from '../../core/modal/modal.module';
       useDefaultLang: true,
       defaultLanguage: environment.defaultLocale,
     }),
-    NgbModalModule,
   ],
   exports: [PostListComponent],
   providers: [PostService],

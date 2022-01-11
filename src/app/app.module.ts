@@ -24,6 +24,7 @@ import { NavigationComponent } from './core/header/components/navigation/navigat
 import { LanguageSelectorComponent } from './core/header/components/language-selector/language-selector.component';
 import { MenuItemComponent } from './core/header/components/menu/menu-item.component';
 import { environment } from '../environments/environment';
+import { NgbModalModule } from './core/modal/modal.module';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { environment } from '../environments/environment';
       defaultLanguage: environment.defaultLocale,
     }),
     AppRoutingModule,
+    NgbModalModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
