@@ -8,6 +8,7 @@ import { Post, PostService } from './services/post.service';
   styleUrls: ['./post.component.scss'],
 })
 export class PostPageComponent implements OnInit {
+  currentLang: string = this.translate.currentLang;
   currentHeadline = 'Headline';
   headline: string = '';
   fetchedPosts: Post[] = [];
@@ -15,13 +16,12 @@ export class PostPageComponent implements OnInit {
 
   constructor(
     private postService: PostService,
-    private translateService: TranslateService
+    public translate: TranslateService
   ) {}
 
   ngOnInit(): void {
     this.fetchPosts();
-    const browserLang = this.translateService.getBrowserLang();
-    this.translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+    this.translate.use(this.currentLang);
   }
 
   changeHeadline(newHeadline: string): void {

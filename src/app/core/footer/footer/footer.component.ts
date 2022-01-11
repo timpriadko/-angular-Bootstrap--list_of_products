@@ -7,12 +7,10 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-  constructor(public translateService: TranslateService) {
-    translateService.addLangs(['en', 'fr']);
-    translateService.setDefaultLang('en');
+  currentLang: string = this.translate.currentLang;
 
-    const browserLang = translateService.getBrowserLang();
-    translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+  constructor(public translate: TranslateService) {
+    this.translate.use(this.currentLang);
   }
 
   // TODO: add condition for the footer position on the page

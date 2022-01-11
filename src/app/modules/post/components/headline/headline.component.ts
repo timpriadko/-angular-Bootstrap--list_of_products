@@ -8,6 +8,8 @@ import { Post } from '../../services/post.service';
   styleUrls: ['./headline.component.scss'],
 })
 export class HeadlineComponent {
+  currentLang: string = this.translate.currentLang;
+
   @Input()
   posts: Post[] = [];
 
@@ -21,14 +23,11 @@ export class HeadlineComponent {
 
   displayInputBlock: boolean = false;
 
+  // TODO: change content str to translation
   tooltipText: string = 'Click the headline text to change it';
 
-  constructor(public translateService: TranslateService) {
-    translateService.addLangs(['en', 'fr']);
-    translateService.setDefaultLang('en');
-
-    const browserLang = translateService.getBrowserLang();
-    translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+  constructor(public translate: TranslateService) {
+    this.translate.use(this.currentLang);
   }
 
   newHeadline(value: string): void {
@@ -36,6 +35,7 @@ export class HeadlineComponent {
     this.headlineInput = '';
   }
 
+  // TODO: change content str to translation
   displayInputBlockHandler(): void {
     this.displayInputBlock = !this.displayInputBlock;
     this.tooltipText =

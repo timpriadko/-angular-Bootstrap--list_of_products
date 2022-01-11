@@ -9,6 +9,8 @@ import { Post } from '../../services/post.service';
   styleUrls: ['./post-item.component.scss'],
 })
 export class PostItemComponent {
+  currentLang: string = this.translate.currentLang;
+
   @Input()
   post: Post;
 
@@ -22,15 +24,9 @@ export class PostItemComponent {
     this.removePostEvent.emit(id);
   }
 
-  constructor(public translateService: TranslateService) {
-    translateService.addLangs(['en', 'fr']);
-    translateService.setDefaultLang('en');
-
-    const browserLang = translateService.getBrowserLang();
-    translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
-  }
+  constructor(public translate: TranslateService) {}
 
   ngOnInit(): void {
-    this.translateService.use(environment.defaultLocale);
+    this.translate.use(this.currentLang);
   }
 }

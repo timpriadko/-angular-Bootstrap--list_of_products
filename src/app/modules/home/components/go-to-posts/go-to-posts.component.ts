@@ -8,17 +8,15 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./go-to-posts.component.scss'],
 })
 export class GoToPostsComponent implements OnInit {
-  constructor(
-    private router: Router,
-    private translateService: TranslateService
-  ) {}
+  currentLang: string = this.translate.currentLang;
+
+  constructor(private router: Router, public translate: TranslateService) {}
 
   goToPostsPage() {
     this.router.navigate(['/posts']);
   }
 
   ngOnInit() {
-    const browserLang = this.translateService.getBrowserLang();
-    this.translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+    this.translate.use(this.currentLang);
   }
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Copyright, Language } from '../../core/constants';
+import { Language } from '../../core/constants';
 
 @Component({
   selector: 'app-homepage',

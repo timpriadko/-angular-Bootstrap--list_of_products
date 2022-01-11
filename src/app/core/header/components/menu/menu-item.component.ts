@@ -8,14 +8,12 @@ import { TranslateService } from '@ngx-translate/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MenuItemComponent {
+  currentLang: string = this.translate.currentLang;
+
   @Input()
   menuItem: Object;
 
   constructor(public translate: TranslateService) {
-    translate.addLangs(['en', 'fr']);
-    translate.setDefaultLang('en');
-
-    const browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match(/fr|fr/) ? 'fr' : 'en');
+    this.translate.use(this.currentLang);
   }
 }

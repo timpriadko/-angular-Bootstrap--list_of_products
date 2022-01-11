@@ -9,24 +9,18 @@ import { Post, PostService } from './modules/post/services/post.service';
   providers: [PostService],
 })
 export class AppComponent implements OnInit {
-  currentHeadline = 'Headline';
-  headline: string = '';
+  currentLang: string = this.translate.currentLang;
   fetchedPosts: Post[] = [];
   error = '';
 
   constructor(
     private postService: PostService,
-    private translateService: TranslateService
+    public translate: TranslateService
   ) {}
 
   ngOnInit(): void {
     this.fetchPosts();
-    const browserLang = this.translateService.getBrowserLang();
-    this.translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
-  }
-
-  changeHeadline(newHeadline: string): void {
-    this.currentHeadline = newHeadline;
+    this.translate.use(this.currentLang);
   }
 
   fetchPosts(): void {
