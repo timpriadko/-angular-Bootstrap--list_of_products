@@ -3,6 +3,7 @@ export enum Language {
   FR = 'fr',
 }
 
-export enum Copyright {
-  TEXT = 'Copyright © 2022. All rights reserved.',
+export enum ModalCloseReason {
+  SAVE = 'save',
+  DISMISS = 'dismiss',
 }

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { ModalCloseReason } from '../../../../core/constants';
 import { Post } from '../../services/post.service';
 
 @Component({
@@ -18,12 +19,16 @@ export class HeadlineComponent {
 
   headlineInput: string = '';
 
+  newHeadlineVal: string = '';
+
   @Output()
   newHeadlineEvent = new EventEmitter<string>();
 
   displayInputBlock: boolean = false;
 
   modalOpened: boolean = false;
+
+  modalCloseReason: string = '';
 
   // TODO: change content str to translation
   tooltipText: string = 'Click the headline text to change it';
@@ -37,28 +42,19 @@ export class HeadlineComponent {
     this.headlineInput = '';
   }
 
-  // TODO: change content str to translation
-  displayInputBlockHandler(): void {
-    this.displayInputBlock = !this.displayInputBlock;
-    this.tooltipText =
-      this.displayInputBlock === true
-        ? 'Click the headline text to close the input block'
-        : 'Click the headline text to change it';
-  }
-
-  // TODO: change Headline => move to the modal
-
   openModalHandler(): void {
     this.modalOpened = !this.modalOpened;
-    console.log(this.modalOpened);
-  }
-
-  closeModalHandler(value: boolean): void {
-    console.log(value);
-    this.modalOpened = value;
   }
 
   updateHeadlineOnModalChange(value: string): void {
-    console.log(value);
+    this.modalCloseReason = value;
+  }
+
+  closeModalHandler(value: boolean): void {
+    this.modalOpened = value;
+
+    if (this.modalCloseReason === ModalCloseReason.SAVE) {
+      this.newHeadline(this.headlineInput);
+    }
   }
 }

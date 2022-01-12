@@ -7,34 +7,16 @@
   {{ headline }}
 </h1>
 
-<!-- <div *ngIf="displayInputBlock" class="card">
-  <input
-    type="text"
-    placeholder="{{ 'Common.HEADLINE' | translate }}"
-    [(ngModel)]="headlineInput"
-    (keyup.enter)="newHeadline(headlineInput)"
-  />
-  <button class="btn mt-2 mr-0" (click)="newHeadline(headlineInput)">
-    {{ 'Common.CHANGE' | translate }}
-  </button>
-</div> -->
-
 <ngb-modal
   [modalOpened]="modalOpened"
   (modalCloseEvent)="closeModalHandler($event)"
   (modalCloseReasonEvent)="updateHeadlineOnModalChange($event)"
 >
   <ng-container>
-    <div class="card">
-      <input
-        type="text"
-        placeholder="{{ 'Common.HEADLINE' | translate }}"
-        [(ngModel)]="headlineInput"
-        (keyup.enter)="newHeadline(headlineInput)"
-      />
-      <button class="btn mt-2 mr-0" (click)="newHeadline(headlineInput)">
-        {{ 'Common.CHANGE' | translate }}
-      </button>
-    </div>
+    <input
+      type="text"
+      placeholder="{{ 'Common.HEADLINE' | translate }}"
+      [(ngModel)]="headlineInput"
+    />
   </ng-container>
 </ngb-modal>

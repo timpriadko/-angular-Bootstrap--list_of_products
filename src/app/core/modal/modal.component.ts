@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { ModalCloseReason } from '../constants';
 
 @Component({
   selector: 'ngb-modal',
@@ -53,22 +54,20 @@ export class NgbdModalBasic implements OnInit {
     this.modalReference = this.modalService.open(modalContent);
     this.modalReference.result.then(
       (result) => {
-        this.closeReason = 'close';
         // close
-        // console.log('close');
+        this.closeReason = ModalCloseReason.SAVE;
         this.closeModal(false, this.closeReason);
       },
       (reason) => {
         // dismiss
-        this.closeReason = 'dismiss';
-        // console.log('Dismissed');
+        this.closeReason = ModalCloseReason.DISMISS;
         this.closeModal(false, this.closeReason);
       }
     );
   }
 
   closeModal(value: boolean, reason: string): void {
-    this.modalCloseEvent.emit(value);
     this.modalCloseReasonEvent.emit(reason);
+    this.modalCloseEvent.emit(value);
   }
 }
