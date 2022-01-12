@@ -27,6 +27,4 @@ export class LanguageSelectorComponent {
   newLangHandler(value: string): void {
     this.newLangEvent.emit(value);
   }
-
-  // TODO: store selected language to be able to display translated content on the selected language
 }
