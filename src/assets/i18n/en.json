@@ -9,7 +9,8 @@
     "POSTS": "Posts",
     "FOOTER": "Footer",
     "GO_TO_POSTS": "Go to Posts",
-    "COPYRIGHT": "Copyright © 2022. All rights reserved."
+    "COPYRIGHT": "Copyright © 2022. All rights reserved.",
+    "HEADLINE_TOOLTIP": "Click the headline text to change it"
   },
   "Language": {
     "EN": "English",

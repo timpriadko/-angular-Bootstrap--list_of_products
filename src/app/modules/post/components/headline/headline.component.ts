@@ -30,9 +30,6 @@ export class HeadlineComponent {
 
   modalCloseReason: string = '';
 
-  // TODO: change content str to translation
-  tooltipText: string = 'Click the headline text to change it';
-
   constructor(public translate: TranslateService) {
     translate.use(this.currentLang);
   }
