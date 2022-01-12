@@ -16,7 +16,7 @@ import { HeaderComponent } from './core/header/header.component';
 import { ErrorPageComponent } from './core/error-page/error-page.component';
 import { PostListModule } from './modules/post/post.module';
 import { HeadlineComponent } from './modules/post/components/headline/headline.component';
-import { FooterComponent } from './core/footer/footer/footer.component';
+import { FooterComponent } from './core/footer/footer.component';
 import { HomepageComponent } from './modules/home/home.component';
 import { HomeModule } from './modules/home/home.module';
 import { PostPageComponent } from './modules/post/post.component';
