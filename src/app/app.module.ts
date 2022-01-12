@@ -25,6 +25,8 @@ import { LanguageSelectorComponent } from './core/header/components/language-sel
 import { environment } from '../environments/environment';
 import { NgbModalModule } from './core/modal/modal.module';
 import { MenuItemComponent } from './core/header/components/menu/components/menu-item/menu-item.component';
+import { MenuComponent } from './core/header/components/menu/components/menu.component';
+import { MenuBurgerComponent } from './core/header/components/menu/components/menu-burger/menu-burger.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { MenuItemComponent } from './core/header/components/menu/components/menu
     FooterComponent,
     LanguageSelectorComponent,
     MenuItemComponent,
+    MenuComponent,
+    MenuBurgerComponent,
   ],
   imports: [
     BrowserModule,

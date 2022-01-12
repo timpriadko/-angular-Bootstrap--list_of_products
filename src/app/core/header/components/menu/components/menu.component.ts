@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { MenuItem } from '../../../header.component';
 // import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -9,7 +10,10 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 })
 export class MenuComponent {
   @Input()
-  menuItems: object[];
+  menuActive: boolean;
+
+  @Input()
+  menuItems: MenuItem[];
 
   // constructor(public translate: TranslateService) {
   //   translate.use(this.currentLang);
@@ -17,5 +21,9 @@ export class MenuComponent {
 
   trackByFn(item): number {
     return item.id;
+  }
+
+  burgerHandler(): void {
+    // this.menuActive = !this.menuActive;
   }
 }

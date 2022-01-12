@@ -5,6 +5,8 @@
     <span></span>
   </div>
 
+  <app-menu-burger [menuActive]="menuActive"></app-menu-burger>
+
   <ul id="menu" [class.active]="menuActive">
     <app-menu-item
       *ngFor="let menuItem of menuItems; trackBy: trackByFn"

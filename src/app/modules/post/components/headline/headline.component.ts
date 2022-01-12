@@ -54,4 +54,6 @@ export class HeadlineComponent {
       this.newHeadline(this.headlineInput);
     }
   }
+
+  // // TODO: change texts 'Change Headline' and 'Save' to translations
 }

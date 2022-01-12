@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Language } from '../../../constants';
+import { MenuItem } from '../../header.component';
 
 @Component({
   selector: 'app-navigation',
@@ -9,7 +10,7 @@ import { Language } from '../../../constants';
 })
 export class NavigationComponent {
   @Input()
-  menuItems: object[];
+  menuItems: MenuItem[];
 
   menuActive: boolean = false;
 
