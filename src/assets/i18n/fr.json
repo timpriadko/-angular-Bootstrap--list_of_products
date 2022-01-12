@@ -2,7 +2,6 @@
   "Common": {
     "DELETE": "Effacer",
     "CHANGE": "Changer",
-    "HEADLINE": "Gros titre",
     "APP_NAME": "Poste candidature",
     "HOME_PAGE": "Page d'accueil",
     "HOME": "Page d'accueil",
@@ -10,7 +9,12 @@
     "FOOTER": "Bas de page",
     "GO_TO_POSTS": "Aller aux messages",
     "COPYRIGHT": "Copyright © 2022. Tous droits réservés.",
-    "HEADLINE_TOOLTIP": "Cliquez sur le texte du titre pour le modifier"
+    "SAVE": "Sauvegarder"
+  },
+  "Headline": {
+    "HEADLINE": "Gros titre",
+    "HEADLINE_TOOLTIP": "Cliquez sur le texte du titre pour le modifier",
+    "CHANGE": "Changer le titre"
   },
   "Language": {
     "EN": "Anglais",

@@ -1,6 +1,8 @@
 <ng-template #modalContent let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">{{ modalTitle }}</h4>
+    <h4 class="modal-title" id="modal-basic-title">
+      {{ modalTitle | translate }}
+    </h4>
     <button
       type="button"
       class="close"
@@ -21,7 +23,7 @@
       class="btn btn-outline-dark"
       (click)="modal.close('Save')"
     >
-      Save
+      {{ "Common.SAVE" | translate }}
     </button>
   </div>
 </ng-template>

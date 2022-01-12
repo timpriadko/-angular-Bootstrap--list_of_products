@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateService } from '@ngx-translate/core';
 import { ModalCloseReason } from '../constants';
 
 @Component({
@@ -17,6 +18,8 @@ import { ModalCloseReason } from '../constants';
   styleUrls: ['./modal.component.scss'],
 })
 export class NgbdModalBasic implements OnInit {
+  currentLang: string = this.translate.currentLang;
+
   @Input()
   title: String;
 
@@ -38,10 +41,15 @@ export class NgbdModalBasic implements OnInit {
 
   closeReason: string = '';
 
-  constructor(private modalService: NgbModal) {}
+  constructor(
+    private modalService: NgbModal,
+    public translate: TranslateService
+  ) {
+    translate.use(this.currentLang);
+  }
 
   ngOnInit(): void {
-    this.modalTitle = !!this.title ? this.title : 'Change Headline';
+    this.modalTitle = !!this.title ? this.title : 'Headline.CHANGE';
   }
 
   ngOnChanges(changes) {
