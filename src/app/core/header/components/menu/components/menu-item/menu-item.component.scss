@@ -4,8 +4,11 @@
 
   &.active {
     a {
-      // color: #343a40;
       text-decoration: underline;
+
+      @media (max-width: 991.98px) {
+        color: #343a40;
+      }
     }
   }
 }
