@@ -12,6 +12,7 @@ export class NavigationComponent {
   @Input()
   menuItems: MenuItem[];
 
+  // TO REMOVE after menu-component is finished
   menuActive: boolean = false;
 
   langs: string[] = this.translate.getLangs();
@@ -29,6 +30,7 @@ export class NavigationComponent {
     this.translate.use(newLang);
   }
 
+  // TO REMOVE after menu-component is finished
   trackByFn(item): number {
     return item.id;
   }

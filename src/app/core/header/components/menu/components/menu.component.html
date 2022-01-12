@@ -5,7 +5,10 @@
     <span></span>
   </div>
 
-  <app-menu-burger [menuActive]="menuActive"></app-menu-burger>
+  <app-menu-burger
+    [menuActive]="menuActive"
+    (menuActiveStateEvent)="menuActiveStateHandler($event)"
+  ></app-menu-burger>
 
   <ul id="menu" [class.active]="menuActive">
     <app-menu-item

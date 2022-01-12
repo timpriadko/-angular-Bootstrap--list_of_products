@@ -26,4 +26,8 @@ export class MenuComponent {
   burgerHandler(): void {
     // this.menuActive = !this.menuActive;
   }
+
+  menuActiveStateHandler(value: boolean): void {
+    console.log(value);
+  }
 }

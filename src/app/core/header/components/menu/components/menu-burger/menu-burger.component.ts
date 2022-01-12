@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 
 @Component({
   selector: 'app-menu-burger',
@@ -10,7 +16,12 @@ export class MenuBurgerComponent {
   @Input()
   menuActive: boolean;
 
+  @Output()
+  menuActiveStateEvent = new EventEmitter<boolean>();
+
   burgerHandler(): void {
     // this.menuActive = !this.menuActive;
+    console.log(['menu-burger', !this.menuActive]);
+    this.menuActiveStateEvent.emit(!this.menuActive);
   }
 }
