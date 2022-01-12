@@ -22,9 +22,9 @@ import { HomeModule } from './modules/home/home.module';
 import { PostPageComponent } from './modules/post/post.component';
 import { NavigationComponent } from './core/header/components/navigation/navigation.component';
 import { LanguageSelectorComponent } from './core/header/components/language-selector/language-selector.component';
-import { MenuItemComponent } from './core/header/components/menu/menu-item.component';
 import { environment } from '../environments/environment';
 import { NgbModalModule } from './core/modal/modal.module';
+import { MenuItemComponent } from './core/header/components/menu/components/menu-item/menu-item.component';
 
 @NgModule({
   declarations: [
