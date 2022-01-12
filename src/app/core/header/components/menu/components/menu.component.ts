@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { MenuItem } from '../../../header.component';
-// import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menu',
@@ -9,22 +8,17 @@ import { MenuItem } from '../../../header.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MenuComponent {
-  @Input()
-  menuActive: boolean;
+  menuActive: boolean = false;
 
   @Input()
   menuItems: MenuItem[];
-
-  // constructor(public translate: TranslateService) {
-  //   translate.use(this.currentLang);
-  // }
 
   trackByFn(item): number {
     return item.id;
   }
 
   burgerHandler(): void {
-    // this.menuActive = !this.menuActive;
+    this.menuActive = !this.menuActive;
   }
 
   menuActiveStateHandler(value: boolean): void {

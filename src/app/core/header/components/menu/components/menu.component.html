@@ -1,13 +1,7 @@
 <div id="menuToggle">
-  <div class="burger" [class.active]="menuActive" (click)="burgerHandler()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
   <app-menu-burger
     [menuActive]="menuActive"
-    (menuActiveStateEvent)="menuActiveStateHandler($event)"
+    (click)="burgerHandler()"
   ></app-menu-burger>
 
   <ul id="menu" [class.active]="menuActive">
