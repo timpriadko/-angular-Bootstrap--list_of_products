@@ -1,6 +1,6 @@
 <h1
   class="text-center"
-  (click)="displayInputBlockHandler()"
+  (click)="openModalHandler()"
   placement="top"
   ngbTooltip="{{ tooltipText }}"
 >
@@ -28,12 +28,12 @@
     <div class="card">
       <input
         type="text"
-        placeholder="{{ 'COMMON.HEADLINE' | translate }}"
+        placeholder="{{ 'Common.HEADLINE' | translate }}"
         [(ngModel)]="headlineInput"
         (keyup.enter)="newHeadline(headlineInput)"
       />
       <button class="btn mt-2 mr-0" (click)="newHeadline(headlineInput)">
-        {{ 'COMMON.CHANGE' | translate }}
+        {{ 'Common.CHANGE' | translate }}
       </button>
     </div>
   </ng-container>
