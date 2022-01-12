@@ -12,9 +12,6 @@ export class NavigationComponent {
   @Input()
   menuItems: MenuItem[];
 
-  // TO REMOVE after menu-component is finished
-  menuActive: boolean = false;
-
   langs: string[] = this.translate.getLangs();
 
   currentLang: string = this.translate.currentLang;
@@ -29,15 +26,4 @@ export class NavigationComponent {
   changeLangHandler(newLang: string): void {
     this.translate.use(newLang);
   }
-
-  // TO REMOVE after menu-component is finished
-  trackByFn(item): number {
-    return item.id;
-  }
-
-  burgerHandler(): void {
-    this.menuActive = !this.menuActive;
-  }
-
-  // TODO: move "Burger" menu to separated Dumb component
 }

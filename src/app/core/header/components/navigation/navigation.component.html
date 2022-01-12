@@ -10,21 +10,6 @@
       (newLangEvent)="changeLangHandler($event)"
     ></app-language-selector>
 
-    <div id="menuToggle">
-      <div class="burger" [class.active]="menuActive" (click)="burgerHandler()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <ul id="menu" [class.active]="menuActive">
-        <app-menu-item
-          *ngFor="let menuItem of menuItems; trackBy: trackByFn"
-          [menuItem]="menuItem"
-        ></app-menu-item>
-      </ul>
-    </div>
-
     <app-menu [menuItems]="menuItems"></app-menu>
   </div>
 </nav>
