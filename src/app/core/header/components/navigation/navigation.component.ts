@@ -9,11 +9,11 @@ import { Language } from '../../../constants';
 })
 export class NavigationComponent {
   @Input()
-  menuItems: Object[];
+  menuItems: object[];
 
-  menuActive: Boolean = false;
+  menuActive: boolean = false;
 
-  langs: String[] = this.translate.getLangs();
+  langs: string[] = this.translate.getLangs();
 
   currentLang: string = this.translate.currentLang;
 
