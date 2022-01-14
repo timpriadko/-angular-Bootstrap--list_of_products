@@ -32,12 +32,12 @@ import { MenuBurgerComponent } from './core/header/components/menu/components/me
   declarations: [
     AppComponent,
     HeaderComponent,
+    FooterComponent,
     NavigationComponent,
     HomepageComponent,
     ErrorPageComponent,
     PostPageComponent,
     HeadlineComponent,
-    FooterComponent,
     LanguageSelectorComponent,
     MenuItemComponent,
     MenuComponent,
