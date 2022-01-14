@@ -14,13 +14,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { PostService } from './services/post.service';
 import { environment } from '../../../environments/environment';
+import { SinglePostPageComponent } from './components/single-post-page/single-post-page.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [PostListComponent, PostItemComponent],
+  declarations: [PostListComponent, PostItemComponent, SinglePostPageComponent],
   imports: [
     CommonModule,
     NgbModule,
     FormsModule,
+    RouterModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

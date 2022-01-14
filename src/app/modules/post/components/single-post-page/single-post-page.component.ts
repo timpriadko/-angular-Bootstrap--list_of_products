@@ -3,11 +3,11 @@ import { TranslateService } from '@ngx-translate/core';
 import { Post } from '../../services/post.service';
 
 @Component({
-  selector: 'app-post-item',
-  templateUrl: './post-item.component.html',
-  styleUrls: ['./post-item.component.scss'],
+  selector: 'app-single-post-page',
+  templateUrl: './single-post-page.component.html',
+  styleUrls: ['./single-post-page.component.scss'],
 })
-export class PostItemComponent {
+export class SinglePostPageComponent {
   currentLang: string = this.translate.currentLang;
 
   @Input()
