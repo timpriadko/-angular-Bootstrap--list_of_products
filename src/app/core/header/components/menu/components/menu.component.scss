@@ -1,5 +1,5 @@
 // hamburger menu styles
-#menuToggle {
+.menuToggle {
   @media (max-width: 991.98px) {
     display: block;
     position: relative;
@@ -26,7 +26,7 @@
     * Make this absolute positioned
     * at the top left of the screen
     */
-#menu {
+.menu {
   margin-bottom: 0;
   display: flex;
 

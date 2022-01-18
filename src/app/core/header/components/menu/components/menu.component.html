@@ -1,10 +1,10 @@
-<div id="menuToggle">
+<div class="menuToggle">
   <app-menu-burger
     [menuActive]="menuActive"
     (click)="burgerHandler()"
   ></app-menu-burger>
 
-  <ul id="menu" [class.active]="menuActive">
+  <ul class="menu" [class.active]="menuActive">
     <app-menu-item
       *ngFor="let menuItem of menuItems; trackBy: trackByFn"
       [menuItem]="menuItem"
