@@ -1,4 +1,4 @@
-<div class="col-xl-12 d-flex flex-column">
+<div class="col-xl-12 d-flex flex-wrap justify-content-around">
   <app-post-item
     [post]="post"
     (removePostEvent)="removePost($event)"
@@ -6,10 +6,9 @@
     *ngFor="let post of posts; trackBy: trackByFn; let idx = index"
     [ngClass]="{
       border: idx % 2,
-      'align-self-end': idx % 2,
       'border-warning': idx % 2,
       'border-success': idx % 3
     }"
-    class="card col-md-8 mt-3 border border-primary"
+    class="card col-md-5 mt-3 border border-primary"
   ></app-post-item>
 </div>
