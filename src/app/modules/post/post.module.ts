@@ -14,11 +14,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { PostService } from './services/post.service';
 import { environment } from '../../../environments/environment';
-import { SinglePostPageComponent } from './components/single-post-page/single-post-page.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [PostListComponent, PostItemComponent, SinglePostPageComponent],
+  declarations: [PostListComponent, PostItemComponent],
   imports: [
     CommonModule,
     NgbModule,

@@ -1,4 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Post } from '../../services/post.service';
 
@@ -6,6 +12,7 @@ import { Post } from '../../services/post.service';
   selector: 'app-post-item',
   templateUrl: './post-item.component.html',
   styleUrls: ['./post-item.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PostItemComponent {
   currentLang: string = this.translate.currentLang;
