@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { MenuItem } from '../../../header.component';
+import { MenuItem } from '../../../../model/navigation';
 
 @Component({
   selector: 'app-menu',

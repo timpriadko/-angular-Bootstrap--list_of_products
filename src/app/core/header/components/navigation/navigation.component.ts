@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Language } from '../../../constants';
-import { MenuItem } from '../../header.component';
+import { MenuItem } from '../../../model/navigation';
 
 @Component({
   selector: 'app-navigation',
