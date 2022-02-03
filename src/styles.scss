@@ -125,3 +125,12 @@ textarea {
 hr {
   margin: 0.5rem 0;
 }
+
+.footer-nav-item {
+  .menu-item {
+    a {
+      color: $white !important;
+      font-size: 18px;
+    }
+  }
+}
