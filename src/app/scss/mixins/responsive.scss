@@ -1,0 +1,57 @@
+@import '../const/breakpoints.scss';
+
+// Small devices
+@mixin sm-down {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md-down {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg-down {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl-down {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin sm-up {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md-up {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg-up {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl-up {
+  @media (max-width: #{$screen-xl-min}) {
+    @content;
+  }
+}

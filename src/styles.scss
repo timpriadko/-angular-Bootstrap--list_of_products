@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-$primaryColor: hotpink;
-$bordo: rgb(141, 1, 94);
-
-$warning: $bordo !default;
+// custom Bootstrap variables to override original values
+@import './app/scss/bootstrap/custom-bootstrap-variables';
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+// colors
+@import './app/scss/const/colors.scss';
+// fonts
+@import './app/scss/const/fonts.scss';
 
 * {
   box-sizing: border-box;
@@ -15,18 +17,12 @@ $warning: $bordo !default;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: $primary_font;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
-  color: #333;
+  background-color: $white;
+  color: $main_black;
   overflow-x: hidden;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 1rem;
 }
 
 a {
@@ -34,7 +30,7 @@ a {
 }
 
 a:hover {
-  color: #666;
+  color: $black_2;
 }
 
 ul {
@@ -47,8 +43,8 @@ img {
 
 .btn {
   display: inline-block;
-  background: #333333;
-  color: #fff;
+  background: $main_black;
+  color: $white;
   padding: 0.4rem 1.3rem;
   font-size: 1rem;
   border: none;
@@ -58,21 +54,21 @@ img {
   outline: none;
 
   &:disabled {
-    background: #ccc;
-    color: #000;
+    background: $gray;
+    color: $main_black;
     cursor: not-allowed;
   }
 
   &:hover {
     opacity: 0.8;
-    color: #fff;
-    background: #777784;
+    color: $white;
+    background: $gray_2;
   }
 }
 
 .btn.btn-danger {
-  background: #dc3545;
-  color: #fff;
+  background: $main_red;
+  color: $white;
 }
 
 .form-control {
@@ -98,7 +94,7 @@ img {
 
 .card {
   padding: 1rem;
-  border: #ccc 1px dotted;
+  border: $gray 1px dotted;
   margin: 0.7rem 0;
 
   p {
@@ -126,11 +122,15 @@ hr {
   margin: 0.5rem 0;
 }
 
-.footer-nav-item {
-  .menu-item {
-    a {
-      color: $white !important;
-      font-size: 18px;
-    }
+.page-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & > .container {
+    height: auto;
   }
 }
+
+@import './app/scss/components/footer/footer.scss';
