@@ -8,13 +8,14 @@ import {
 } from '@ngx-translate/core';
 import { MissingTranslationService } from '../../core/services/translate-service/MissingTranslationService';
 import { HttpLoaderFactory } from '../../libs/settings/HttpLoaderFactory';
-import { PostItemComponent } from './components/post-item/post-item.component';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { PostService } from './services/post.service';
 import { environment } from '../../../environments/environment';
 import { RouterModule } from '@angular/router';
+import { PostItemComponent } from './components/post-item/post-item.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [PostListComponent, PostItemComponent],
@@ -36,8 +37,9 @@ import { RouterModule } from '@angular/router';
       useDefaultLang: true,
       defaultLanguage: environment.defaultLocale,
     }),
+    SharedModule,
   ],
   exports: [PostListComponent],
   providers: [PostService],
 })
-export class PostListModule {}
+export class PostModule {}

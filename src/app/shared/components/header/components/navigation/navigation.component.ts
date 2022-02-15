@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Language } from '../../../constants';
-import { MenuItem } from '../../../model/navigation';
+import { Language } from '../../../../../core/constants';
+import { MenuItem } from '../../header.component';
 
 @Component({
   selector: 'app-navigation',
@@ -10,7 +10,7 @@ import { MenuItem } from '../../../model/navigation';
 })
 export class NavigationComponent {
   @Input()
-  menuItems: MenuItem[];
+  menuItems!: MenuItem[];
 
   langs: string[] = this.translate.getLangs();
 

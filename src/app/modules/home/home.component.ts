@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import {
+  MenuItem,
+  MenuItems,
+} from 'src/app/shared/components/header/model/menu';
 import { Language } from '../../core/constants';
-import { MenuItem, MenuItems } from '../../core/model/navigation';
 
 @Component({
   selector: 'app-homepage',
@@ -17,5 +20,9 @@ export class HomepageComponent {
     translate.setDefaultLang(Language.EN);
 
     translate.use(this.currentLang);
+  }
+
+  trackByFn(item: any): any {
+    return item.id;
   }
 }
