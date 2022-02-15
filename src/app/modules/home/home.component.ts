@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import {
-  MenuItem,
-  MenuItems,
-} from 'src/app/shared/components/header/model/menu';
+import { MenuItem, MenuItems } from '../../shared/components/header/model/menu';
 import { Language } from '../../core/constants';
 
 @Component({

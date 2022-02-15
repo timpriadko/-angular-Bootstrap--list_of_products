@@ -2,10 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
-import {
-  MenuItem,
-  MenuItems,
-} from 'src/app/shared/components/header/model/menu';
+import { MenuItem, MenuItems } from '../../shared/components/header/model/menu';
 import { Post, PostService } from '../post/services/post.service';
 
 @Component({

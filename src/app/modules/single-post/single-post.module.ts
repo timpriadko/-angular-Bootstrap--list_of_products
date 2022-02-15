@@ -6,11 +6,11 @@ import {
   TranslateLoader,
   TranslateModule,
 } from '@ngx-translate/core';
-import { HttpLoaderFactory } from 'src/app/libs/settings/HttpLoaderFactory';
+import { HttpLoaderFactory } from '../../libs/settings/HttpLoaderFactory';
 import { HttpClient } from '@angular/common/http';
-import { MissingTranslationService } from 'src/app/core/services/translate-service/MissingTranslationService';
+import { MissingTranslationService } from '../..//core/services/translate-service/MissingTranslationService';
 import { environment } from 'src/environments/environment';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { SharedModule } from '../..//shared/shared.module';
 
 @NgModule({
   declarations: [SinglePostComponent],

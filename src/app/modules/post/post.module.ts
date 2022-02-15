@@ -15,7 +15,7 @@ import { PostService } from './services/post.service';
 import { environment } from '../../../environments/environment';
 import { RouterModule } from '@angular/router';
 import { PostItemComponent } from './components/post-item/post-item.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [PostListComponent, PostItemComponent],
