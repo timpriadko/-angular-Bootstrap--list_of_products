@@ -9,7 +9,7 @@ import {
 import { HttpLoaderFactory } from '../../libs/settings/HttpLoaderFactory';
 import { HttpClient } from '@angular/common/http';
 import { MissingTranslationService } from '../..//core/services/translate-service/MissingTranslationService';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 import { SharedModule } from '../..//shared/shared.module';
 
 @NgModule({

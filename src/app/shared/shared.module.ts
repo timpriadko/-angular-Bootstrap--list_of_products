@@ -16,7 +16,7 @@ import {
 } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../libs/settings/HttpLoaderFactory';
 import { MissingTranslationService } from '../core/services/translate-service/MissingTranslationService';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../environments/environment';
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
