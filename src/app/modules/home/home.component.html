@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <div class="container">
-  <div class="text-center">
+  <div class="text-center mt-3">
     <h3>{{ 'Common.HOME_PAGE' | translate }}</h3>
     <app-go-to-posts></app-go-to-posts>
   </div>
@@ -50,12 +50,20 @@
         class="
           footer-nav-wrap
           d-flex
+          flex-column flex-md-row
           align-items-center
-          justify-content-md-between
+          justify-content-center justify-content-md-between
         "
       >
         <app-go-to-posts></app-go-to-posts>
-        <div class="footer-nav-list d-flex">
+        <div
+          class="
+            footer-nav-list
+            d-flex
+            flex-column flex-md-row
+            justify-content-center
+          "
+        >
           <app-menu-item
             *ngFor="let menuItem of menuItems; trackBy: trackByFn"
             [menuItem]="menuItem"
