@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { MenuItem } from '../../../../../model/navigation';
+import { MenuItem } from '../../../../model/menu';
 
 @Component({
   selector: 'app-menu-item',
